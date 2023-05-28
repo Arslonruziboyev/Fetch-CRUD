@@ -1,10 +1,33 @@
 import React, { useEffect } from "react";
 import "./listing.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const EpListing = () => {
   const [empdata, empdatachange] = useState(null);
+  const navigate = useNavigate();
+
+  const LoadDetail = (id) => {
+    navigate("components/details/" + id);
+  };
+  const Removefunction = (id) => {
+    if (window.confirm("Do you want to remove?")) {
+      fetch("http://localhost:7000/employment/" + id, {
+        method: "DELETE",
+      })
+        .then((res) => {
+          alert("Removed successfully.");
+          window.location.reload();
+        })
+        .catch((err) => {
+          console.log(err.message);
+        });
+    }
+  };
+
+  const LoadEdit = (id) => {
+    navigate("components/edit/" + id);
+  };
   useEffect(() => {
     fetch("http://localhost:7000/employment")
       .then((res) => res.json())
@@ -40,7 +63,7 @@ const EpListing = () => {
                   <td>{item.name}</td>
                   <td>{item.email}</td>
                   <td>{item.phone}</td>
-                  {/* <td>
+                  <td>
                     <a
                       onClick={() => {
                         LoadEdit(item.id);
@@ -65,7 +88,7 @@ const EpListing = () => {
                     >
                       Details
                     </a>
-                  </td> */}
+                  </td>
                 </tr>
               ))}
           </tbody>
