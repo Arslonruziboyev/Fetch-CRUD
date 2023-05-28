@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Link } from "react";
 import { useParams } from "react-router-dom";
 
 const EpPost = () => {
