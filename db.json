@@ -1,0 +1,18 @@
+{
+  "employment": [
+    {
+      "name": "Nihira techiees",
+      "email": "nihiratechiees@gmail.com",
+      "phone": "98899090",
+      "active": true,
+      "id": 1
+    },
+    {
+      "name": "Arslon Ruziboev",
+      "email": "arslonruziboyev@gmail.com",
+      "phone": "234234234",
+      "active": true,
+      "id": 2
+    }
+  ]
+}
