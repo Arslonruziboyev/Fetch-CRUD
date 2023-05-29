@@ -1,6 +1,7 @@
 import React from "react";
-import { useState, useEffect, Link } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const EpPost = () => {
   const { empid } = useParams();
@@ -30,9 +31,15 @@ const EpPost = () => {
           <h3>Contact Details</h3>
           <h5>Email is : {empdata.email}</h5>
           <h5>Phone is : {empdata.phone}</h5>
+          <Link to="/" className="btn-back">
+            Back
+          </Link>
+          {/* <h3>Contact Details</h3>
+          <h5>Email is : {empdata.email}</h5>
+          <h5>Phone is : {empdata.phone}</h5>
           <Link className="btn btn-danger" to="/">
             Back to Listing
-          </Link>
+          </Link> */}
         </h1>
       )}
     </div>

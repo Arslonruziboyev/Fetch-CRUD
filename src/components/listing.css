@@ -32,6 +32,7 @@
   padding: 10px 15px;
   font-size: 18px;
   text-decoration: none;
+  margin: 10px;
 }
 
 .list-header {
@@ -42,7 +43,7 @@
 }
 .list-table table {
   width: 100%;
-  display: inline-block;
+  display: inline;
 }
 .list-table thead {
   width: 100%;
@@ -61,6 +62,9 @@
 }
 .list-table tbody td {
   padding: 10px 15px;
+}
+.list-table tr {
+  margin: 10px 0;
 }
 
 /* //ssdcs */
